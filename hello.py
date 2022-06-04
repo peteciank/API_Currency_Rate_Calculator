@@ -15,4 +15,6 @@ r = requests.get(url)
 json = r.json()
 df = pd.DataFrame(json, index=[0])
 
-st.markdown(df)
+st.dataframe(df)
+
+#st.markdown(df)
