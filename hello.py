@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("Hello World. This is Peter.")
+st.markdown("Hello George. This is Peter.")
 
 import pandas as pd
 import requests
