@@ -5,5 +5,3 @@ matplotlib
 numpy
 yfinance
 lxml
-libxml2
-libxslt
