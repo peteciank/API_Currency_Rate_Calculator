@@ -3,7 +3,6 @@ import pandas as pd
 import base64
 import matplotlib.pyplot as plt
 import numpy as np
-import yfinance as yf
 
 st.title('World Wide Poverty Table')
 
@@ -56,35 +55,6 @@ def filedownload(df):
 
 st.markdown(filedownload(df_selected_sector), unsafe_allow_html=True)
 
-# https://pypi.org/project/yfinance/
 
-data = yf.download(
-        tickers = list(df_selected_sector[:10].Symbol),
-        period = "ytd",
-        interval = "1d",
-        group_by = 'ticker',
-        auto_adjust = True,
-        prepost = True,
-        threads = True,
-        proxy = None
-    )
-
-# Plot Closing Price of Query Symbol
-def price_plot(symbol):
-  df = pd.DataFrame(data[symbol].Close)
-  df['Date'] = df.index
-  fig = plt.figure()
-  plt.fill_between(df.Date, df.Close, color='skyblue', alpha=0.3)
-  plt.plot(df.Date, df.Close, color='skyblue', alpha=0.8)
-  plt.xticks(rotation=90)
-  plt.title(symbol, fontweight='bold')
-  plt.xlabel('Date', fontweight='bold')
-  plt.ylabel('Closing Price', fontweight='bold')
-  return st.pyplot(fig)
 
 num_company = st.sidebar.slider('Number of Regions', 1, 5)
-
-if st.button('Show Plots'):
-    st.header('Stock Closing Price')
-    for i in list(df_selected_sector.Symbol)[:num_company]:
-        price_plot(i)
