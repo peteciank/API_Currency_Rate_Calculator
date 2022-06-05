@@ -12,7 +12,7 @@ import requests
 # df = pd.DataFrame(json, index=[0])
 
 new_url = st.text_input('Enter URL API with Anonymous Access')
-st.button("Show API Data", on_click=load_data(new_url))
+#st.button("Show API Data", on_click=load_data(new_url))
 
 #@st.cache
 def load_data(url):
