@@ -11,7 +11,9 @@ import requests
 # json = r.json()
 # df = pd.DataFrame(json, index=[0])
 
-new_url = st.text_input('Enter URL API with Anonymous Access', on_change=load_data(new_url))
+new_url = st.text_input('Enter URL API with Anonymous Access')
+
+load_data(new_url)
 #st.button("Show API Data", on_click=load_data(new_url))
 
 #@st.cache
