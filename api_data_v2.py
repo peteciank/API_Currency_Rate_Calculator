@@ -17,7 +17,7 @@ load_data(new_url)
 #st.button("Show API Data", on_click=load_data(new_url))
 
 #@st.cache
-def load_data(url):
+def load_data(url='https://api-dolar-argentina.herokuapp.com/api/dolaroficial'):
     # url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
     r = requests.get(url)
     json = r.json()
