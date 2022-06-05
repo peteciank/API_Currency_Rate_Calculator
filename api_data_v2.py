@@ -23,4 +23,4 @@ def load_data(url):
 
 
 
-st.dataframe(df)
+st.dataframe(load_data(url))
