@@ -34,9 +34,9 @@ cot = load_data(selection)
 
 
 monto = st.number_input('Ingresar Monto a convertir')
-compra = cot.to_numeric(cot.iloc[0]['compra'])
-st.write(monto)
-st.write(compra)
+total = cot * monto #.to_numeric(cot.iloc[0]['compra'])
+st.write(total)
+#st.write(compra)
 #compra = monto * pd.to_numeric(df.iloc[0]['compra'])
 #venta = monto / pd.to_numeric(df.iloc[0]['venta'])
 #st.write("Compra: " + compra)
