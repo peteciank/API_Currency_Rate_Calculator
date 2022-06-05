@@ -23,6 +23,7 @@ def load_data(option):
     json = r.json()
     df = pd.DataFrame(json, index=[0])
     st.dataframe(df)
+    return df
 
 
 #def ShowData():
