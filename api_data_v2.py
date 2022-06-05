@@ -13,7 +13,7 @@ import requests
 
 new_url = st.text_input('Enter URL API with Anonymous Access')
 
-load_data(new_url)
+
 #st.button("Show API Data", on_click=load_data(new_url))
 
 #@st.cache
@@ -28,4 +28,4 @@ def load_data(url='https://api-dolar-argentina.herokuapp.com/api/dolaroficial'):
 #def ShowData():
 #    st.dataframe(load_data(url))
 
-
+load_data(new_url)
