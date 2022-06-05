@@ -13,7 +13,7 @@ import requests
 
 url = st.text_input('Enter URL API with Anonymous Access')
 
-@st.cache
+#@st.cache
 def load_data(url):
     # url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
     r = requests.get(url)
@@ -21,6 +21,7 @@ def load_data(url):
     df = pd.DataFrame(json, index=[0])
     return df
 
+def ShowData():
+    st.dataframe(load_data(url))
 
-
-st.dataframe(load_data(url))
+st.button("Show API Data", on_click=ShowData())
