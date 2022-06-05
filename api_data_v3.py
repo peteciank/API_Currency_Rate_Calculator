@@ -32,9 +32,11 @@ def load_data(option):
 load_data(selection)
 
 monto = st.number_input('Ingresar Monto a convertir')
+st.write(monto)
+st.write(pd.to_numeric(df.iloc[0]['compra']))
 #compra = monto * pd.to_numeric(df.iloc[0]['compra'])
 #venta = monto / pd.to_numeric(df.iloc[0]['venta'])
 #st.write("Compra: " + compra)
 #st.write("Venta: " + venta)
 
-st.write(monto / 3)
+
