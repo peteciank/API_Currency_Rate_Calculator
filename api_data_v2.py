@@ -16,6 +16,9 @@ new_url = st.text_input('Enter URL API with Anonymous Access')
 
 #st.button("Show API Data", on_click=load_data(new_url))
 
+st.selectbox('Seleccionar Tipo de Cambio', ["Dolar Oficial","Dolar Blue","Dolar Bolsa"])
+
+
 #@st.cache
 def load_data(url='https://api-dolar-argentina.herokuapp.com/api/dolaroficial'):
     # url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
