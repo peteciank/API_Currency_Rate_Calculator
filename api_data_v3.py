@@ -37,4 +37,4 @@ monto = st.number_input('Ingresar Monto a convertir')
 #st.write("Compra: " + compra)
 #st.write("Venta: " + venta)
 
-st.write(monto * 3)
+st.write(monto / 3)
