@@ -29,12 +29,12 @@ def load_data(option):
 #def ShowData():
 #    st.dataframe(load_data(url))
 
-cot = load_data(selection.iloc[0]['compra'])
+cot = load_data(selection)
 
 
 
 monto = st.number_input('Ingresar Monto a convertir')
-total = cot * monto #.to_numeric(cot.iloc[0]['compra'])
+total = cot.iloc[0]['compra'] * monto #.to_numeric(cot.iloc[0]['compra'])
 st.write(total)
 #st.write(compra)
 #compra = monto * pd.to_numeric(df.iloc[0]['compra'])
