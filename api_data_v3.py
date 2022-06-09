@@ -29,7 +29,7 @@ def load_data(option):
 #def ShowData():
 #    st.dataframe(load_data(url))
 
-cot = load_data(selection)
+cot = load_data(selection.iloc[0]['compra'])
 
 
 
