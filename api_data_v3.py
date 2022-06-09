@@ -37,7 +37,7 @@ st.write(total)
 
 
 monto = st.number_input('Ingresar Monto a convertir para la Venta')
-total = pd.to_numeric(cot.iloc[0]['compra']) * monto 
+total = pd.to_numeric(cot.iloc[0]['venta']) * monto 
 st.write(total)
 
 
