@@ -51,7 +51,7 @@ cot = load_data(selection)
 
 
 
-monto = st.number_input('Type amount to convert to compra (buy)") 
+monto = st.number_input('Type amount to convert to compra (buy)') 
 total = pd.to_numeric(cot.iloc[0]['compra']) * monto
 st.write(total)
 
