@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("Version 2. Bringing data from API")
+st.markdown("Version 3. Bringing data from API, using a selector to choose Exchange types, and converting ratios for 'compra' and 'venta'")
 
 import pandas as pd
 import requests
