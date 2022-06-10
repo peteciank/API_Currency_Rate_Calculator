@@ -19,7 +19,9 @@ def All_data():
   df_blue = pd.DataFrame(requests.get(url_blue).json(), index=[0])
   df_bolsa = pd.DataFrame(requests.get(url_bolsa).json(), index=[0])
   
-  df_all = pd.merge(pd.merge(df_oficial,df_blue,on=['fecha','compra','venta']),df_bolsa,on=['fecha','compra','venta'])
+  df_all = df_oficial
+  df_all = df_merged.append(df_blue, ignore_index=True)
+  df_all = df_merged.append(df_bolsa, ignore_index=True)
   st.dataframe(df_all)
   
 st.markdown("Today's Most Relevant Exchange Ratios in Argentina")
