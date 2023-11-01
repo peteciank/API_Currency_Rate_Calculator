@@ -11,9 +11,9 @@ import requests
 def All_data():
   #r = requests.get(url)
   #url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
-  url_oficial = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
-  url_blue = 'https://api-dolar-argentina.herokuapp.com/api/dolarblue'
-  url_bolsa = 'https://api-dolar-argentina.herokuapp.com/api/dolarbolsa'
+  url_oficial = 'https://dolarapi.com/v1/dolares/oficial'
+  url_blue = 'https://dolarapi.com/v1/dolares/blue'
+  url_bolsa = 'https://dolarapi.com/v1/dolares/bolsa'
   
   df_oficial = pd.DataFrame(requests.get(url_oficial).json(), index=[0])
   df_blue = pd.DataFrame(requests.get(url_blue).json(), index=[0])
