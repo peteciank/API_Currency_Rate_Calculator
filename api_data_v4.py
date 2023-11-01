@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("Version 4. Create a merged table with most relevant exchanges, Exchange selector type, convertion rate")
+st.markdown("Version 4. Create a merged table with most relevant exchanges, Exchange selector type, convertion rate.")
 
 import pandas as pd
 import requests
