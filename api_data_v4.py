@@ -35,11 +35,11 @@ st.write(selection)
 
 def load_data(option):
     if option == "Dolar Oficial":
-       url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial'
+       url = 'https://dolarapi.com/v1/dolares/oficial'
     elif option == "Dolar Blue":
-       url = 'https://api-dolar-argentina.herokuapp.com/api/dolarblue'
+       url = 'https://dolarapi.com/v1/dolares/blue'
     else:
-       url = 'https://api-dolar-argentina.herokuapp.com/api/dolarbolsa'
+       url = 'https://dolarapi.com/v1/dolares/bolsa'
     
     r = requests.get(url)
     json = r.json()
