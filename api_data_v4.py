@@ -70,3 +70,6 @@ st.write(total_mix)
 monto_sell = st.number_input('Type amount to convert to Venta (sell)')
 total_sell = pd.to_numeric(cot.iloc[0]['venta']) * monto_sell
 st.write(total_sell)
+
+
+st.write("Developed by Pedro Ciancaglini - https://www.linkedin.com/in/pedrociancaglini/")
