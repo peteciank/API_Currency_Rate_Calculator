@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.markdown("Version 4. Create a merged table with most relevant exchanges, Exchange selector type, convertion rate.")
+st.markdown("Version 4. Create a merged table with most relevant exchanges, Exchange selector type, convertion rate")
+
+#streamlit run api_data_v4.py
 
 import pandas as pd
 import requests
@@ -19,9 +21,11 @@ def All_data():
   df_blue = pd.DataFrame(requests.get(url_blue).json(), index=[0])
   df_bolsa = pd.DataFrame(requests.get(url_bolsa).json(), index=[0])
   
+  # pd.concat([df1, df2], axis=1)
+
   df_all = df_oficial
-  df_all = df_all.append(df_blue, ignore_index=True)
-  df_all = df_all.append(df_bolsa, ignore_index=True)
+  df_all = pd.concat([df_all, df_blue, df_bolsa])
+  #df_all = pd.concat([df_all, df_bolsa], axis=1)
   st.dataframe(df_all)
   
 st.markdown("Today's Most Relevant Exchange Ratios in Argentina")
@@ -53,12 +57,16 @@ cot = load_data(selection)
 
 
 
-monto = st.number_input('Type amount to convert to compra (buy)') 
-total = pd.to_numeric(cot.iloc[0]['compra']) * monto
-st.write(total)
+monto_buy = st.number_input('Type amount to convert to compra (buy)') 
+total_buy = pd.to_numeric(cot.iloc[0]['compra']) * monto_buy
+st.write(total_buy)
 
+monto_mix = st.number_input('Type amount to convert to compra (MIX)') 
+total_mix = pd.to_numeric(cot.iloc[0]['compra']) + pd.to_numeric(cot.iloc[0]['venta'])
+total_mix = total_mix / 2
+total_mix = total_mix * monto_mix
+st.write(total_mix)
 
-monto = st.number_input('Type amount to convert to Venta (sell)')
-total = pd.to_numeric(cot.iloc[0]['venta']) * monto 
-st.write(total)
-
+monto_sell = st.number_input('Type amount to convert to Venta (sell)')
+total_sell = pd.to_numeric(cot.iloc[0]['venta']) * monto_sell
+st.write(total_sell)
