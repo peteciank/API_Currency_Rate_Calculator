@@ -1,4 +1,4 @@
-```markdown
+
 # Streamlit App - Dollar Rate Calculator for Argentina 💰🇦🇷
 
 Hey there! Are you tired of juggling between different Dollar rates in Argentina? 😫 Don't worry, we've got you covered! 🛡️
@@ -24,6 +24,6 @@ This Streamlit app helps you calculate Dollar rates in Argentina effortlessly! �
 Developed by Pedro Ciancaglini - [Connect with me on LinkedIn](https://www.linkedin.com/in/pedrociancaglini/) 🚀
 
 Latest update: Sunday 5 November, 2023, 9.50 📅
-```
+
 
 
